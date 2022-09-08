@@ -440,3 +440,88 @@
 
 </body>
 </html>
+
+
+
+<section class="about" id="about" style="padding-top:15rem">
+
+    <div class="row m-5" style="    background: var(--black);
+    border: 1px solid #e4e4e4;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 20%);">
+
+        <div class="image" style="display:flex ">
+            <img src="images/about-img.png" alt="">
+        </div>
+
+        <div class="content">
+            <h1>Who we are?</h1>
+            <p>Layashree Engineers - A reputable international brand of industrial products, one of the largest
+                channel partners, was founded in 2019. Since 2019, a first-time business owner with modest
+                beginnings and big goals has changed the way in which customers are responded to and served.</p>
+            <p>The business procedure was committed to providing customers with timely service. Focused commitment
+                and efforts led to significant network growth and expansion.</p>
+            <p>We are a group of procurement specialists who assist customers in reducing supply chain costs while
+                increasing efficiency, thus we are more than simply a Power Transmission & Electrical Channel
+                Partner. We offer a variety of items under one roof to satisfy project or urgent maintenance
+                requirements.</p>
+            <p><b><i>"We value our customers feedback thus increasing Quality of Service"</i></b></p>
+        </div>
+    </div>
+
+
+
+<section class="u-align-center u-clearfix u-section-2" id="carousel_5a7a">
+<div class="u-clearfix u-sheet u-valign-top-xs u-sheet-1 " style=" padding-left:2rem ;    background: var(--black);
+box-shadow: 0 5px 15px rgb(0 0 0 / 20%); border: none;">
+  <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+    <div class="u-repeater u-repeater-1" >
+      <div class="u-align-left u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-1" data-animation-name="customAnimationIn" data-animation-duration="1250">
+        <div class="u-container-layout u-similar-container u-container-layout-1"><span class="u-custom-color-2 u-file-icon u-icon u-icon-rounded u-radius-20 u-text-white u-icon-1"><img src="images/7164048.png" alt=""></span>
+          <h3 class="u-custom-font u-font-montserrat u-text u-text-default u-text-palette-1-base u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"> Leading Partners For A Variety Of Brands</h3>
+          <p class="u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500" data-animation-direction="Left">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+          </p>
+        </div>
+      </div>
+      <div class="u-align-left u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-2" data-animation-name="customAnimationIn" data-animation-duration="1250" data-animation-delay="0">
+        <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-custom-color-2 u-file-icon u-icon u-icon-rounded u-radius-20 u-text-white u-icon-2"><img src="images/725381.png" alt=""></span>
+          <h3 class="u-custom-font u-font-montserrat u-text u-text-default u-text-palette-1-base u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"> Numerous Global Brands Under One Roof</h3>
+          <p class="u-text u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500" data-animation-direction="Left">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+          </p>
+        </div>
+      </div>
+      <div class="u-align-left u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-3" data-animation-name="customAnimationIn" data-animation-duration="1250">
+        <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-custom-color-2 u-file-icon u-icon u-icon-rounded u-radius-20 u-text-white u-icon-3"><img src="images/149302.png" alt=""></span>
+          <h3 class="u-custom-font u-font-montserrat u-text u-text-default u-text-palette-1-base u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"> Best Customer Support</h3>
+          <p class="u-text u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-direction="Left" data-animation-delay="500">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="u-text u-text-default u-text-palette-1-base u-text-7">Why <span class="u-text-custom-color-2">us</span>
+  </h2>
+  <p class="u-align-left u-custom-font u-heading-font u-text u-text-black u-text-8">There are plenty of reasons to choose us over the others in the market. We provide best-in class service, product delivery, many products from various brands.</p>
+  <h2 class="u-text u-text-default u-text-9">Our Esteemed Products
+  </h2>
+  <ul class="u-align-left u-custom-font u-heading-font u-text u-text-10">
+    <li>
+      <a href="./products.html" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Motors &amp; Gearbox</a>
+    </li>
+    <li>
+      <a href="./products.html" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">Variable Frequency Drive</a>
+      <br>
+    </li>
+    <li>
+      <a href="./products.html" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">Switchgear</a>
+      <br>
+    </li>
+    <li>
+      <a href="./products.html" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3">Automations</a>
+    </li>
+    <li>
+      <a href="./products.html" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-4">V-Belts, Pulleys &amp; Couplings</a>
+    </li>
+  </ul>
+</div>
+</section>
+</section>

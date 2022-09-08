@@ -28,11 +28,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="css/style_slider.css" rel="stylesheet" type="text/css" media="all" />
 
-        <!-- firebase links-->
-	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!-- firebase links-->
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
 </head>
 
@@ -52,7 +52,6 @@
             <div style="display:flex; align-items: center;">
                 <a href="#" class="logo">
                     <img src="images/logo.png" alt="">
-
                 </a>
                 <h1 style="color: var(--font); padding-left: 1rem; ">LAYASHREE ENGINEERING</h1>
             </div>
@@ -64,8 +63,8 @@
                     <div class="dropdown-new products-type">
                         products
                     </div>
-                    <a>contact</a>
-                    <a href="./enquiry.html">enquiry</a>
+                    <a href="./contact.html">contact</a>
+                    <a>enquiry</a>
                 </nav>
 
                 <div class="icons">
@@ -85,32 +84,65 @@
 
         <div class="row">
 
-            <iframe class="map"
-                `src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.5663650331594!2d80.13939001482363!3d13.126634590754252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc794816f73fe6576!2zMTPCsDA3JzM1LjkiTiA4MMKwMDgnMjkuNyJF!5e0!3m2!1sen!2sin!4v1660499712486!5m2!1sen!2sin"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <form id="sectionForm" action="https://formsubmit.co/a16b90d17ddf48de7502a84857d51948" method="POST">
+                <h3>Enquiry</h3>
+                <div class="inputBox">
+                    <input id="name" name="Company name" type="text" placeholder="company name" required>
+                </div>
+                <div class="inputBox">
+                    <input id="person" name="Contact person" type="text" placeholder="contact person" required>
+                </div>
+                <div class="inputBox">
+                    <input id="number" name="Contact number" type="number" placeholder="contact number" required>
+                </div>
+                <div class="inputBox">
+                    <input id="mail-id" name="Mail-id" type="email" placeholder="mail-id (optional)">
+                </div>
 
-            <form action="">
-                <h3>get in touch</h3>
-                <div class="inputBox">
-                    <span class="fas fa-user"></span>
-                    <input type="text" placeholder="name">
+                <!-- Start of checkbox section -->
+
+
+                <div class="container checkmark-options">
+                    <div class="group">
+                        <input class="largerCheckbox" type="checkbox" name="products" id="panel" value="panel" >
+                        <label for="panel">Panel</label><span class="checkmark"></span>
+                    </div>
+
+                    <div class="group">
+                        <input class="largerCheckbox" type="checkbox" name="products" id="VFD" value="VFD" >
+                        <label for="VFD">VFD</label><span class="checkmark"></span>
+                    </div>
+
+                    <div class="group">
+                        <input class="largerCheckbox" type="checkbox" name="products" id="Switchgear" value="Switchgear" >
+                        <label for="Switchgear">Switchgear</label>
+                        <span class="checkmark"></span>
+                    </div>
+
+                    <div class="group">
+                        <input class="largerCheckbox" type="checkbox" name="products" id="Switchgear" value="Switchgear" >
+                        <label for="Switchgear">Switchgear</label><span class="checkmark"></span>
+                    </div>
+
+                    <div class="group">
+                        <input class="largerCheckbox" type="checkbox" name="products" id="Switchgear" value="Switchgear" >
+                        <label for="Switchgear">Switchgear</label><span class="checkmark"></span>
+                    </div>
                 </div>
+                <!-- End of checkbox section -->
+
+
                 <div class="inputBox">
-                    <span class="fas fa-envelope"></span>
-                    <input type="email" placeholder="email">
+                    <textarea style="height: 140px" name="Remarks" id="Remarks" placeholder="Write your remarks here..."
+                        required></textarea>
                 </div>
-                <div class="inputBox">
-                    <span class="fas fa-phone"></span>
-                    <input type="number" placeholder="number">
-                </div>
-                <input type="submit" value="contact now" class="btn">
+
+
+                <input type="submit" value="Submit" class="btn">
             </form>
         </div>
 
     </section>
-
-    <!-- contact section ends -->
 
 
     <!-- FOOTER SECTION START-->
@@ -177,7 +209,7 @@
         </div>
         <!--- END CONTAINER -->
 
-        <div class="atf-footer-boottom mt-">
+        <div class="atf-footer-boottom mt-4">
             <div class="container">
                 <div style="display:flex; align-items: center; justify-content:center;">
                     <p>&copy;Copyright - All Right Reserved Layashree Engineering </p>
@@ -190,7 +222,6 @@
     </footer>
     <!--- END FOOTER -->
 
-
     <!-- Latest jQuery -->
     <script src="./js/jquery-2.1.4.min.js"></script>
     <!-- Latest compiled and minified Bootstrap -->
@@ -199,7 +230,8 @@
     <script src="./js/slick.js"></script>
     <!-- main js -->
     <script src="./js/main.js"></script>
-
+    <!-- checkbox-validation js -->
+    <script src="./js/checkbox-validation.js"></script>
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
@@ -242,7 +274,6 @@
         });
     </script>
     <!-- //end-smoth-scrolling -->
-
 </body>
 
 </html>

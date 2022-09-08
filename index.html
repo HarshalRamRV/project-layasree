@@ -1,200 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layasree Engineers</title>
+    <title>Layashree Engineers</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="./fonts/font-awesome.css">
+    <!--slick Css-->
+    <link rel="stylesheet" href="./css/slick.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/style2.css">
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
     <link href="css/style_slider.css" rel="stylesheet" type="text/css" media="all" />
 
+        <!-- firebase links-->
+	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
 </head>
+
 <body>
-    
-<!-- header section starts  -->
 
-<header class="header-box">
-    <div class="header-top">
-            <div ><i class="fas fa-envelope"></i>Email: <a href="#">layashree.engineering@gmail.com</a></div>
+    <!-- header section starts  -->
+    <button class="atf-scroll-top atf-back-to-top" data-targets="html">
+        <i class="fa fa-angle-up atf-scrollup-icon"></i>
+    </button>
+    <header class="header-box">
+        <div class="header-top">
+            <div><i class="fas fa-envelope"></i>Email: <a href="#">layashree.engineering@gmail.com</a></div>
             <div><i class="fas fa-phone-volume"></i>Contact: <a href="#">+91 81244 61234 </a></div>
-    </div>
-    <div class="header">
-    <div style="display:flex; align-items: center;">
-        <a href="#" class="logo">
-            <img src="images/logo.png" alt="">   
-    
-        </a>
-        <h1 style="color: var(--font); padding-left: 1rem; ">LAYASHREE ENGINEERING</h1>  
-    </div>
+        </div>
+        <div class="header">
+            <div style="display:flex; align-items: center;">
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="">
 
-<div>
-    <nav class="navbar">
-        <a>home</a>
-        <a href="./about.html">about</a>
-        <a href="./products.html">products</a>
-        <a href="./contact.html">contact</a>
-    </nav>
+                </a>
+                <h1 style="color: var(--font); padding-left: 1rem; ">LAYASHREE ENGINEERING</h1>
+            </div>
 
-    <div class="icons">
-        <div class="fas fa-bars" id="menu-btn"></div>
-    </div>
-</div>
-</div>
-</header>
+            <div>
+                <nav class="navbar">
+                    <a>home</a>
+                    <a href="./about.html">about</a>
+                    <div class="dropdown-new products-type">
+                        products
+                    </div>
+                    <a href="./contact.html">contact</a>
+                    <a href="./enquiry.html">enquiry</a>
+                </nav>
 
-<!-- header section ends -->
+                <div class="icons">
+                    <div class="fas fa-bars" id="menu-btn"></div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<!-- home section starts  -->
-<section class="home" id="home">
-    <div class="banner_top" id="home" style="width: 100%;">
-    <div class="wrapper_top_w3layouts">
-        <!-- /slider -->
-        <div class="slider">
-            <div class="callbacks_container">
-                <ul class="rslides callbacks callbacks1" id="slider4">
-                    <li>
-                        <div class="banner-top2">
-                            <div class="banner-info-wthree" >
-                                <h3 style="color: white">Welcome to Layasree Engineers</h3>
-                                <p style="color: white">We look forward to serving you.</p>
+    <!-- header section ends -->
 
-                            </div>
+    <!-- home section starts  -->
+    <section class="home" id="home">
+        <div class="banner_top" id="home" style="width: 100%;">
+            <div class="wrapper_top_w3layouts">
+                <!-- /slider -->
+                <div class="slider">
+                    <div class="callbacks_container">
+                        <ul class="rslides callbacks callbacks1" id="slider4">
+                            <li>
+                                <div class="banner-top2">
+                                    <div class="banner-info-wthree">
+                                        <h3 style="color: white">Welcome to Layashree Engineers</h3>
+                                        <p style="color: white">We look forward to serving you.</p>
 
-                        </div>
-                    </li>
-                    <li>
-                        <div class="banner-top3">
-                            <div class="banner-info-wthree">
-                                <h3 style="color: white">GearBox & Gear Motors</h3>
-                                <p style="color: white">Bonfiglioli, Rossi, Top gear, IC Bauer.</p>
+                                    </div>
 
-                            </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-top3">
+                                    <div class="banner-info-wthree">
+                                        <h3 style="color: white">GearBox & Gear Motors</h3>
+                                        <p style="color: white">Bonfiglioli, Rossi, Top gear, IC Bauer.</p>
 
-                        </div>
-                    </li>
-                    <li>
-                        <div class="banner-top">
-                            <div class="banner-info-wthree">
-                                <h3 style="color: white">Power Distribution Product</h3>
-                                <p style="color: white">MCCB, overload relay, MCB, HRC fuse, ACB.</p>
+                                    </div>
 
-                            </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-top">
+                                    <div class="banner-info-wthree">
+                                        <h3 style="color: white">Power Distribution Product</h3>
+                                        <p style="color: white">MCCB, overload relay, MCB, HRC fuse, ACB.</p>
 
-                        </div>
-                    </li>
-                    <li>
-                        <div class="banner-top1">
-                            <div class="banner-info-wthree">
-                                <h3 style="color: white">The Range Of Motors</h3>
-                                <p style="color: white">Siemens, Crompton, Hindustan, Marathon, Havells.</p>
+                                    </div>
 
-                            </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-top1">
+                                    <div class="banner-info-wthree">
+                                        <h3 style="color: white">The Range Of Motors</h3>
+                                        <p style="color: white">Siemens, Crompton, Hindustan, Marathon, Havells.</p>
 
-                        </div>
-                    </li>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                    </div>
+
+
+                    </ul>
 
                 </div>
 
-
-                </ul>
-            
             </div>
-            
+
+
+
+            <!-- //slider -->
         </div>
+        </div>
+    </section>
 
-
-
-        <!-- //slider -->
-    </div>
-</div>
-</section>
-
-    <section class="about" id="about" style="margin: 3rem; padding-bottom: 8rem;">
+    <section class="about" id="about" style="margin: 0rem; padding-bottom: 8rem;">
         <div class="quotes">
-                <p>Best quality motors at best prices, Best energy efficient in evey way</p>
+            <p>Best quality motors at best prices, Best energy efficient in evey way</p>
         </div>
-        <div class="row">
-            <div class="content" >
-                <div class="image"  style="padding-bottom: 3rem">
+        <div class="row home">
+            <div class="content" style="    background: var(--black);
+            border: 1px solid #e4e4e4;
+            box-shadow: 0 5px 15px rgb(0 0 0 / 20%);">
+                <div class="imagehome" style="padding-bottom: 3rem">
                     <img src="./images/landing-info-img1.jpg" alt="">
                 </div>
                 <h3>our aim</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui ea ullam, enim tempora ipsum fuga alias quae ratione a officiis id temporibus autem? Quod nemo facilis cupiditate. Ex, vel?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit amet enim quod veritatis, nihil voluptas culpa! Neque consectetur obcaecati sapiente?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui ea ullam, enim tempora
+                    ipsum fuga alias quae ratione a officiis id temporibus autem? Quod nemo facilis cupiditate. Ex, vel?
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit amet enim quod veritatis, nihil
+                    voluptas culpa! Neque consectetur obcaecati sapiente?</p>
                 <a href="#" class="btn">learn more</a>
             </div>
-            
-            <div class="content">
+
+            <div class="content" style="    background: var(--black);
+            border: 1px solid #e4e4e4;
+            box-shadow: 0 5px 15px rgb(0 0 0 / 20%);">
                 <h3>Why Choose Us?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui ea ullam, enim tempora ipsum fuga alias quae ratione a officiis id temporibus autem? Quod nemo facilis cupiditate. Ex, vel?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit amet enim quod veritatis, nihil voluptas culpa! Neque consectetur obcaecati sapiente?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui ea ullam, enim tempora
+                    ipsum fuga alias quae ratione a officiis id temporibus autem? Quod nemo facilis cupiditate. Ex, vel?
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit amet enim quod veritatis, nihil
+                    voluptas culpa! Neque consectetur obcaecati sapiente?</p>
                 <a href="#" class="btn">learn more</a>
-                <div class="image"  style="padding-top: 3rem">
+                <div class="imagehome" style="padding-top: 3rem">
                     <img src="./images/landing-info-img2.jpg" alt="">
                 </div>
             </div>
-    
+
         </div>
     </section>
-<!-- home section ends -->
+    <!-- home section ends -->
 
-<!-- footer section starts  -->
+    <!-- START SERVICE SECTION  -->
+    <section id="service" class="atf-service-area atf-section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="atf-single-service-wrap text-center">
+                        <div class="atf-single-service-wrap">
+                            <div class="atf-services-icon text-center mb-4">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div class="atf-service-content">
+                                <h2>Free Shipping</h2>
+                                <p>Lorem elementum Sed congue nisl dolorSed congue nisl dolor Lorem Sed congue nisl
+                                    dolorSed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<section class="footer">
-    <div class="share">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
-        <a href="#" class="fab fa-pinterest"></a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="atf-single-service-wrap text-center">
+                        <div class="atf-single-service-wrap">
+                            <div class="atf-services-icon text-center mb-4">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                            <div class="atf-service-content">
+                                <h2>24/7 support</h2>
+                                <p>Lorem elementum Sed congue nisl dolorSed congue nisl dolor Lorem Sed congue nisl
+                                    dolorSed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="atf-single-service-wrap text-center">
+                        <div class="atf-single-service-wrap">
+                            <div class="atf-services-icon text-center mb-4">
+                                <i class="fas fa-money-bill-alt"></i>
+                            </div>
+                            <div class="atf-service-content">
+                                <h2>Secure Payment</h2>
+                                <p>Lorem elementum Sed congue nisl dolorSed congue nisl dolor Lorem Sed congue nisl
+                                    dolorSed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service-Area End-->
+
+    <!-- START COMPANY BRAND LOGO  -->
+    <div id="atf-brand-area" class="atf-brand-area atf-section-padding" style="padding:13rem">
+        <div class="atf-brand-overlay">
+            <div class="container">
+                <div class="atf-slider atf-style2">
+                    <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"
+                        data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="3" data-md-slides="3"
+                        data-lg-slides="5" data-add-slides="3">
+                        <div class="slick-wrapper">
+                            <div class="slick-slide-in">
+                                <div class="atf-brand-active">
+                                    <a href="#"><img src="./images/partner/1.png" alt="image"></a>
+                                </div>
+                            </div><!-- .slick-slide-in -->
+
+                            <div class="slick-slide-in">
+                                <div class="atf-brand-active">
+                                    <a href="#"><img src="./images/partner/2.png" alt="image"></a>
+                                </div>
+                            </div><!-- .slick-slide-in -->
+
+                            <div class="slick-slide-in">
+                                <div class="atf-brand-active">
+                                    <a href="#"><img src="./images/partner/3.png" alt="image"></a>
+                                </div>
+                            </div><!-- .slick-slide-in -->
+                            <div class="slick-slide-in">
+                                <div class="atf-brand-active">
+                                    <a href="#"><img src="./images/partner/4.png" alt="image"></a>
+                                </div>
+                            </div><!-- .slick-slide-in -->
+                            <div class="slick-slide-in">
+                                <div class="atf-brand-active">
+                                    <a href="#"><img src="./images/partner/5.png" alt="image"></a>
+                                </div>
+                            </div><!-- .slick-slide-in -->
+
+                            <div class="slick-slide-in">
+                                <div class="atf-brand-active">
+                                    <a href="#"><img src="./images/partner/1.png" alt="image"></a>
+                                </div>
+                            </div><!-- .slick-slide-in -->
+
+                            <div class="slick-slide-in">
+                                <div class="atf-brand-active">
+                                    <a href="#"><img src="./images/partner/2.png" alt="image"></a>
+                                </div>
+                            </div><!-- .slick-slide-in -->
+
+                        </div><!-- .slick-slide-Wrapper -->
+                    </div><!-- .slick-container -->
+
+                    <div class="pagination atf-style1 atf-flex atf-hidden"></div>
+                    <!-- If dont need Pagination then add class .atf-hidden -->
+                    <div class="swipe-arrow atf-style1">
+                        <!-- If dont need navigation then add class .atf-hidden -->
+                        <div class="slick-arrow-left"><i class="fa fa-chevron-left"></i></div>
+                        <div class="slick-arrow-right"><i class="fa fa-chevron-right"></i></div>
+                    </div>
+                </div><!-- .atf-slider -->
+            </div><!-- .container -->
+        </div><!-- END OVERLAY -->
     </div>
-</section>
+    <!-- END COMPANY BRAND LOGO -->
 
-<!-- footer section ends -->
+    <!-- FOOTER SECTION START-->
+    <footer class="atf-footer-area atf-pattern-area">
+        <div class="container">
+            <div class="atf-footer-top mt-5">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12 atf-footer-link wow fadeIn" data-wow-duration="1s"
+                        data-wow-delay="0.2s" data-wow-offset="0">
+                        <div class="atf-footer-box">
+                            <h5><a href="">Layashree Engineering</a></h5>
+                            <ul class="pr-lg-5">
+                                <li>Malligai St, Vivekananda Nagar, Thirumullaivoyal, Chennai, Tamil Nadu 600109</li>
+                                <li>+91 81244 61234</li>
+                                <li>layashree.engineering@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- END COL -->
+
+                    <div class="col-lg-2 col-md-6 col-12 atf-footer-link wow fadeIn" data-wow-duration="1s"
+                        data-wow-delay="0.3s" data-wow-offset="0">
+                        <h5>Quick Links</h5>
+                        <ul class="atf-list-menu">
+                            <li> <a><i class="fas fa-angle-right mr-2"></i>Our Home</a></li>
+                            <li> <a href="./about.html"><i class="fas fa-angle-right mr-2"></i>About Us</a></li>
+                            <li> <a href="./products.html"><i class="fas fa-angle-right mr-2"></i>Our Products</a></li>
+                            <li> <a href="./contact.html"><i class="fas fa-angle-right mr-2"></i>Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!--- END COL -->
+
+                    <div class="col-lg-2 col-md-6 col-12 atf-footer-link wow fadeIn" data-wow-duration="1s"
+                        data-wow-delay="0.4s" data-wow-offset="0">
+                        <h5>Support Links</h5>
+                        <ul class="atf-list-menu">
+                            <li><a href="#"><i class="fas fa-angle-right mr-2"></i>Our Terms</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right mr-2"></i>Our Service</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right mr-2"></i>Privacy Policy</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right mr-2"></i>Licenses</a></li>
+                        </ul>
+                    </div>
+                    <!--- END COL -->
+
+                    <div class="col-lg-4 col-md-6 col-12 atf-footer-link text-left wow fadeIn" data-wow-duration="1s"
+                        data-wow-delay="0.5s" data-wow-offset="0">
+                        <h5>Follow Us</h5>
+                        <div class="atf-footer-con">
+                            <h4 class="text-white mt-2"></h4>
+                            <div class="atf-footer-social-icon mt-3 text-left">
+                                <a href="#" class="icon"> <i class="fab fa-facebook"></i> </a>
+                                <a href="#" class="icon"> <i class="fab fa-instagram"></i> </a>
+                                <a href="#" class="icon"> <i class="fab fa-whatsapp"></i> </a>
+                                <a href="#" class="icon"> <i class="fab fa-linkedin"></i> </a>
+                                <a href="#" class="icon"> <i class="fab fa-twitter"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- END COL -->
+                </div>
+                <!--- END ROW -->
+            </div>
+            <!--- END SINGLE FOOTER -->
+        </div>
+        <!--- END CONTAINER -->
+
+        <div class="atf-footer-boottom mt-4">
+            <div class="container">
+                <div style="display:flex; align-items: center; justify-content:center;">
+                    <p>&copy;Copyright - All Right Reserved Layashree Engineering </p>
+                    <!--- END COL -->
+                </div>
+                <!--- END ROW -->
+            </div>
+        </div>
+        <!-- FOOTER SECTION END-->
+    </footer>
+    <!--- END FOOTER -->
+
+    <!-- Latest jQuery -->
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <!-- Latest compiled and minified Bootstrap -->
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <!-- slick js -->
+    <script src="./js/slick.js"></script>
+    <!-- main js -->
+    <script src="./js/main.js"></script>
 
 
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
-	<!-- js -->
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<!-- //js -->
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
 
-	<script src="js/responsiveslides.min.js"></script>
-	<script>
-		$(function () {
-			$("#slider4").responsiveSlides({
-				auto: true,
-				pager: true,
-				nav: true,
-				speed: 1000,
-				namespace: "callbacks",
-				before: function () {
-					$('.events').append("<li>before event fired.</li>");
-				},
-				after: function () {
-					$('.events').append("<li>after event fired.</li>");
-				}
-			});
-		});
-	</script>
-	<!-- js for portfolio lightbox -->
-	<!-- start-smoth-scrolling -->
-	<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000);
-			});
-		});
-	</script>
-	<!-- //end-smoth-scrolling -->
+    <!-- firebase -->
+    <script src="js/app.js"></script>
+
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+
+    <script src="js/responsiveslides.min.js"></script>
+    <script>
+        $(function () {
+            $("#slider4").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: true,
+                speed: 1000,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+        });
+    </script>
+    <!-- js for portfolio lightbox -->
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smoth-scrolling -->
 </body>
+
 </html>

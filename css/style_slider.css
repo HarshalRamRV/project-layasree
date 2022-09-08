@@ -396,7 +396,7 @@ li.dropdown.act a.w3_icons_act {
 
 .banner-info-wthree   {
     text-align: center;
-    padding: 17em 0em 0 0em;
+    padding: 28em 0em 0 0em;
 }
 .banner-info-wthree   h4 {
 	font-size: 35px;
@@ -1291,7 +1291,7 @@ p.head_para {
         height: 440px;
     }
     .banner-info-wthree    h3 {
-      font-size: 11em;
+      font-size: 8em;
     }
     .banner-top,.banner-top1,.banner-top2,.banner-top3{
         min-height:700px;
@@ -1348,7 +1348,7 @@ p.head_para {
         min-height: 633px;
     }
     .banner-info-wthree    h3 {
-        font-size: 9em;
+        font-size: 7em;
     }
 }
 @media(max-width:1080px){
@@ -1460,7 +1460,7 @@ p.head_para {
         right: 124px;
     }
     .banner-info-wthree    h3 {
-        font-size: 7em;
+        font-size: 6em;
     }
     .banner-info-wthree    p {
         font-size: 1em;
@@ -1529,7 +1529,7 @@ p.head_para {
         width: 15px;
     }
     .banner-info-wthree    {
-        padding: 14em 0em 0 0em;
+        padding: 26em 0em 0 0em;
     }
     .banner-info-wthree    p {
         font-size: 0.9em;
@@ -1730,7 +1730,7 @@ p.head_para {
         min-height: 461px;
     }
     .banner-info-wthree    {
-        padding: 12em 0em 0 0em;
+        padding: 22em 0em 0 0em;
     }
     .banner-info-wthree    p {
         font-size: 0.8em;
@@ -1787,7 +1787,7 @@ p.head_para {
         min-height: 410px;
     }
     .banner-info-wthree    {
-        padding: 10em 0em 0 0em;
+        padding: 20em 0em 0 0em;
     }
     .banner-info-wthree    h4 {
         font-size: 4em;
@@ -1926,7 +1926,7 @@ p.head_para {
         min-height: 370px;
     }
     .banner-info-wthree    h3 {
-        font-size: 3.5em;
+        font-size: 3em;
     }
     .callbacks_tabs {
         bottom: 16%;
@@ -1973,7 +1973,7 @@ p.head_para {
         min-height: 325px;
     }
     .banner-info-wthree    {
-        padding: 8em 0em 0 0em;
+        padding: 16em 0em 0 0em;
     }
     .single-right-left {
         width: 96%;
@@ -2036,7 +2036,7 @@ p.head_para {
         min-height: 289px;
     }
     .banner-info-wthree    h3 {
-        font-size: 3em;
+        font-size: 2em;
     }
     ul.top_icons {
         left: 33%;
