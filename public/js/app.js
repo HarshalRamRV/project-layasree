@@ -11,6 +11,10 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+productOptions = [];
+items = [];
+productTypes = [];
+products= [];
 
 
 
@@ -24,11 +28,10 @@ function passProductData(productName) {
     location.href = '../products.html';
 }
 
-products = []
-function getProducts() {
+ function getProducts() {
     productName = localStorage.getItem("productName")
     console.log(productName);
-    db.collection('moterBrands').get().then(data => {
+     db.collection('moterBrands').get().then(data => {
         console.log(data.docs[0].data())
         data.docs.forEach(element => {
             const singleProduct = element.data();
@@ -52,7 +55,6 @@ function getProducts() {
 }
 getProducts();
 
-items = []
 function getItems() {
     itemName = localStorage.getItem("itemName")
     console.log(itemName);
@@ -82,7 +84,6 @@ function getItems() {
 }
 getItems();
 
-productTypes = []
 function getProductTypes() {
     db.collection('productTypes').get().then(data => {
         console.log(data.docs[0].data())
@@ -103,9 +104,7 @@ function getProductTypes() {
         })
     });
 }
-getProductTypes();
 
-productOptions = []
 function getProductOptions() {
     db.collection('productOptions').get().then(data => {
         console.log(data.docs[0].data())
