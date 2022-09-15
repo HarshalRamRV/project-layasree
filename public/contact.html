@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layashree Engineers</title>
+    <title>Layashree Engineering</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -28,11 +28,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="css/style_slider.css" rel="stylesheet" type="text/css" media="all" />
 
-        <!-- firebase links-->
-	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!-- firebase links-->
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
 </head>
 
@@ -54,18 +54,26 @@
                     <img src="images/logo.png" alt="">
 
                 </a>
-                <h1 style="color: var(--font); padding-left: 1rem; ">LAYASHREE ENGINEERING</h1>
+                <a href="#">
+                    <h1 style="color: var(--font); padding-left: 1rem; ">LAYASHREE ENGINEERING</h1>
+                </a>
             </div>
 
             <div>
                 <nav class="navbar">
-                    <a href="./index.html">home</a>
-                    <a href="./about.html">about</a>
-                    <div class="dropdown-new products-type">
+                    <div class="navbar-link">
+                        </dv><a href="./index.html">home</a></div>
+                    <div class="navbar-link">
+                        </dv><a href="./about.html">about</a></div>
+                    <div class="dropdown-new">
                         products
+                        <div class="dropdown-new-menu products-type">
+                        </div>
                     </div>
-                    <a>contact</a>
-                    <a href="./enquiry.html">enquiry</a>
+                    <div class="navbar-link">
+                        </dv><a>contact</a></div>
+                    <div class="navbar-link">
+                        </dv><a href="./enquiry.html">enquiry</a></div>
                 </nav>
 
                 <div class="icons">
@@ -89,7 +97,10 @@
                 `src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.5663650331594!2d80.13939001482363!3d13.126634590754252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc794816f73fe6576!2zMTPCsDA3JzM1LjkiTiA4MMKwMDgnMjkuNyJF!5e0!3m2!1sen!2sin!4v1660499712486!5m2!1sen!2sin"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.5663650331594!2d80.13939001482363!3d13.126634590754252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc794816f73fe6576!2zMTPCsDA3JzM1LjkiTiA4MMKwMDgnMjkuNyJF!5e0!3m2!1sen!2sin!4v1662696487897!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.5663650331594!2d80.13939001482363!3d13.126634590754252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc794816f73fe6576!2zMTPCsDA3JzM1LjkiTiA4MMKwMDgnMjkuNyJF!5e0!3m2!1sen!2sin!4v1662696487897!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
 
             <form action="">
                 <h3>get in touch</h3>
@@ -243,7 +254,10 @@
         });
     </script>
     <!-- //end-smoth-scrolling -->
+    <script>
+        getProductTypes();
 
+    </script>
 </body>
 
 </html>

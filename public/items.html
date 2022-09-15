@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layashree Engineers</title>
+    <title>Layashree Engineering</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -29,10 +29,10 @@
     <link href="css/style_slider.css" rel="stylesheet" type="text/css" media="all" />
 
     <!-- firebase links-->
-	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 </head>
 
 <body>
@@ -53,18 +53,26 @@
                     <img src="images/logo.png" alt="">
 
                 </a>
-                <h1 style="color: var(--font); padding-left: 1rem; ">LAYASHREE ENGINEERING</h1>
+                <a href="#">
+                    <h1 style="color: var(--font); padding-left: 1rem; ">LAYASHREE ENGINEERING</h1>
+                </a>
             </div>
 
             <div>
                 <nav class="navbar">
-                    <a href="./index.html">home</a>
-                    <a href="./about.html">about</a>
-                    <div class="dropdown-new products-type">
+                    <div class="navbar-link">
+                        </dv><a href="./index.html">home</a></div>
+                    <div class="navbar-link">
+                        </dv><a href="./about.html">about</a></div>
+                    <div class="dropdown-new">
                         products
+                        <div class="dropdown-new-menu products-type">
+                        </div>
                     </div>
-                    <a href="./contact.html">contact</a>
-                    <a href="./enquiry.html">enquiry</a>
+                    <div class="navbar-link">
+                        </dv><a href="./contact.html">contact</a></div>
+                    <div class="navbar-link">
+                        </dv><a href="./enquiry.html">enquiry</a></div>
                 </nav>
 
                 <div class="icons">
@@ -83,7 +91,12 @@
         <div class="box-container item">
 
         </div>
-
+        
+        <div class='preloader'>
+            <svg class='spinner' height='60px' viewBox='0 0 66 66' width='60px' xmlns='https://www.w3.org/2000/svg'>
+                <circle class='path' cx='33' cy='33' fill='none' r='30' stroke-linecap='round' stroke-width='7' />
+            </svg>
+        </div>
 
     </section>
 
@@ -97,7 +110,9 @@
                     <div class="col-lg-4 col-md-6 col-12 atf-footer-link wow fadeIn" data-wow-duration="1s"
                         data-wow-delay="0.2s" data-wow-offset="0">
                         <div class="atf-footer-box">
-                            <h5><p href="">Layashree Engineering</a></h5>
+                            <h5>
+                                <p href="">Layashree Engineering</a>
+                            </h5>
                             <ul class="pr-lg-5">
                                 <li>Malligai St, Vivekananda Nagar, Thirumullaivoyal, Chennai, Tamil Nadu 600109</li>
                                 <li>+91 81244 61234</li>
@@ -180,7 +195,7 @@
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
-    
+
     <!-- firebase -->
     <script src="js/app.js"></script>
 
@@ -219,7 +234,11 @@
         });
     </script>
     <!-- //end-smoth-scrolling -->
+    <script>
+        getProductTypes();
+        getItems();
 
+    </script>
 </body>
 
 </html>

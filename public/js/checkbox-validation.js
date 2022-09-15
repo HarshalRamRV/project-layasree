@@ -1,4 +1,4 @@
-(function() {
+(function () {
     const form = document.querySelector('#sectionForm');
     const checkboxes = form.querySelectorAll('input[type=checkbox]');
     const checkboxLength = checkboxes.length;
@@ -29,3 +29,20 @@
 
     init();
 })();
+
+
+$(document).ready(
+    function () {
+        $('.popup, .overlay').hide();
+        $(".close-popup").click(function () {
+            $(".popup, .overlay").hide();
+          });
+    });
+
+$(document).on("mouseup", ".overlay", function (e) {
+    $(".popup, .overlay").hide();
+});
+
+$(document).on("mouseup", ".close", function (e) {
+    $(".popup, .overlay").hide();
+});

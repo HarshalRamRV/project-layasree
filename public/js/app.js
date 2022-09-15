@@ -1,11 +1,11 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDWV9CIAhVouAGzGP1uGH-D0nFpzyTP4vM",
-    authDomain: "layasree-webiste.firebaseapp.com",
-    projectId: "layasree-webiste",
-    storageBucket: "layasree-webiste.appspot.com",
-    messagingSenderId: "413759846215",
-    appId: "1:413759846215:web:444a7858f2a73338727e62",
-    measurementId: "G-XXMZ3EVLQP"
+    apiKey: "AIzaSyBqJchfVDVrawF97J_A8khwwdNHFFeezuQ",
+    authDomain: "layashree-engineering.firebaseapp.com",
+    projectId: "layashree-engineering",
+    storageBucket: "layashree-engineering.appspot.com",
+    messagingSenderId: "712097347718",
+    appId: "1:712097347718:web:b551624d34d7cb9805b907",
+    measurementId: "G-5574G4MQYV"
 };
 
 // Initialize Firebase
@@ -14,9 +14,19 @@ const db = firebase.firestore();
 productOptions = [];
 items = [];
 productTypes = [];
-products= [];
+products = [];
+flyers = [];
+brands = [];
 
 
+// $(window).load(
+//     function () {
+//         $(".spinner").fadeOut(),
+//             $(".preloader").delay(150).fadeOut("slow"),
+//             $("body").delay(400).css({ overflow: "visible" })
+
+//     }
+// );
 
 function passItemData(itemName) {
     localStorage.setItem("itemName", itemName);
@@ -28,17 +38,40 @@ function passProductData(productName) {
     location.href = '../products.html';
 }
 
- function getProducts() {
+// function getBrands() {
+//     db.collection("brands").get().then(data => {
+//         data.docs.forEach(element => {
+//             const singleBrand = element.data();
+//             brands.push(singleBrand);
+//         });
+//         brands.forEach(element => {
+//             $('.slick-track').append(
+//                 `
+//                 <div class="slick-slide-in">
+//                     <div class="atf-brand-active">
+//                         <a href="#"><img src="${element.brandLogo}" alt="image"></a>
+//                     </div>
+//                 </div>
+                
+                        
+//                     `
+//             );
+//         })
+//     });
+// }
+// getBrands();
+
+function getProducts() {
     productName = localStorage.getItem("productName")
     console.log(productName);
-     db.collection('moterBrands').get().then(data => {
+    db.collection(productName).get().then(data => {
         console.log(data.docs[0].data())
         data.docs.forEach(element => {
             const singleProduct = element.data();
             products.push(singleProduct);
         });
         products.forEach(element => {
-            $('.products').append(
+            $('.products').prepend(
                 `
                 <div class="wrapper box">
                     <div class="parent"  onclick="passItemData('${element.brandName}');">
@@ -51,9 +84,58 @@ function passProductData(productName) {
                 `
             );
         })
+        $(document).ready(function () {
+            $('.products').append(
+                `
+                <div class="wrapper box">
+                    <div class="parent"  onclick="location.href = '../flyers.html';">
+                        <div class="child" style=" background-image: url(./images/flyer-icon.png);">
+                        <div class="flyers" >
+                            <h3>Flyers</h3>
+                        </div>
+                     </div>
+                </div>
+                `
+            );
+        });
+        $(document).ready(    function () {
+            $(".spinner").fadeOut(),
+                $(".preloader").delay(150).fadeOut("slow"),
+                $("body").delay(400).css({ overflow: "visible" })
+    
+        });
     });
+
 }
-getProducts();
+
+function getFlyers() {
+    db.collection('flyers').get().then(data => {
+        data.docs.forEach(element => {
+            const singleFlyers = element.data();
+            flyers.push(singleFlyers);
+        });
+        flyers.forEach(element => {
+            $('.flyer').prepend(
+                `
+                <div class="wrapper box " style="
+                height: 40vh; width: 20vw;">
+                <div class="parent"  onclick="location.href = '${element.productPDF}';">
+                    <div class="child" style="background-image: url(${element.proImg}); background-color:rgba(242, 0, 0, 0); ">
+                    </div>
+            </div>
+                `
+            );
+        })
+        $(document).ready(    function () {
+            $(".spinner").fadeOut(),
+                $(".preloader").delay(150).fadeOut("slow"),
+                $("body").delay(400).css({ overflow: "visible" })
+    
+        });
+    });
+
+}
+
 
 function getItems() {
     itemName = localStorage.getItem("itemName")
@@ -80,12 +162,17 @@ function getItems() {
                     `
             );
         })
+        $(document).ready(    function () {
+            $(".spinner").fadeOut(),
+                $(".preloader").delay(150).fadeOut("slow"),
+                $("body").delay(400).css({ overflow: "visible" })
+    
+        });
     });
 }
-getItems();
 
 function getProductTypes() {
-    db.collection('productTypes').get().then(data => {
+    db.collection('ProductTypes').get().then(data => {
         console.log(data.docs[0].data())
         data.docs.forEach(element => {
             const singleProduct = element.data();
@@ -94,10 +181,7 @@ function getProductTypes() {
         productTypes.forEach(element => {
             $('.products-type').append(
                 `
-                <div class="dropdown-new-menu">
                     <a onclick="passProductData('${element.productNameCode}');">${element.productTypeName}</a>
-
-                </div>
                 
                 `
             );
@@ -126,3 +210,4 @@ function getProductOptions() {
     });
 }
 getProductOptions();
+

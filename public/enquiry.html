@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layashree Engineers</title>
+    <title>Layashree Engineering</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -25,14 +25,16 @@
     <link rel="stylesheet" href="./css/style2.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link href="css/style_slider.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- firebase links-->
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
 
 </head>
 
@@ -52,19 +54,28 @@
             <div style="display:flex; align-items: center;">
                 <a href="#" class="logo">
                     <img src="images/logo.png" alt="">
+
                 </a>
-                <h1 style="color: var(--font); padding-left: 1rem; ">LAYASHREE ENGINEERING</h1>
+                <a href="#">
+                    <h1 style="color: var(--font); padding-left: 1rem; ">LAYASHREE ENGINEERING</h1>
+                </a>
             </div>
 
             <div>
                 <nav class="navbar">
-                    <a href="./index.html">home</a>
-                    <a href="./about.html">about</a>
-                    <div class="dropdown-new products-type">
+                    <div class="navbar-link">
+                        </dv><a href="./index.html">home</a></div>
+                    <div class="navbar-link">
+                        </dv><a href="./about.html">about</a></div>
+                    <div class="dropdown-new">
                         products
+                        <div class="dropdown-new-menu products-type">
+                        </div>
                     </div>
-                    <a href="./contact.html">contact</a>
-                    <a>enquiry</a>
+                    <div class="navbar-link">
+                        </dv><a href="./contact.html">contact</a></div>
+                    <div class="navbar-link">
+                        </dv><a>enquiry</a></div>
                 </nav>
 
                 <div class="icons">
@@ -79,68 +90,113 @@
     <!-- contact section starts  -->
 
     <section class="contact" id="contact">
-
+        <div class="overlay">
+            <div class="popup">
+                <div class="icon-box">
+                    <i class="material-icons">&#xE876;</i>
+                </div>
+                <h2>Thank you for getting in touch!</h2>
+                <p>We appreciate you contacting us. One of our colleagues will get back in touch with you soon!Have a
+                    great day!</p>
+                <a class="btn close-popup">Close</a>
+            </div>
+        </div>
         <h1 class="heading"> <span>contact</span> us </h1>
 
         <div class="row">
 
-            <form id="sectionForm" action="https://formsubmit.co/a16b90d17ddf48de7502a84857d51948" method="POST">
+            <form id="sectionForm" onsubmit="return postToGoogle();" method="POST">
                 <h3>Enquiry</h3>
                 <div class="inputBox">
-                    <input id="name" name="Company name" type="text" placeholder="company name" required>
+                    <input id="name" name="entry.411717523" type="text" placeholder="company name" required>
                 </div>
                 <div class="inputBox">
-                    <input id="person" name="Contact person" type="text" placeholder="contact person" required>
+                    <input id="person" name="entry.1037375391" type="text" placeholder="contact person" required>
                 </div>
                 <div class="inputBox">
-                    <input id="number" name="Contact number" type="number" placeholder="contact number" required>
+                    <input id="number" name="entry.2047574455" type="number" placeholder="contact number" required>
                 </div>
                 <div class="inputBox">
-                    <input id="mail-id" name="Mail-id" type="email" placeholder="mail-id (optional)">
+                    <input id="mail-id" name="entry.410100171" type="email" placeholder="contact email (optional)">
                 </div>
 
                 <!-- Start of checkbox section -->
 
 
-                <div class="container checkmark-options">
+                <div class="container-checkbox checkmark-options">
                     <div class="group">
-                        <input class="largerCheckbox" type="checkbox" name="products" id="panel" value="panel" >
+                        <input class="largerCheckbox" type="checkbox" name="entry.1490762571" id="Panel" value="true">
                         <label for="panel">Panel</label><span class="checkmark"></span>
                     </div>
 
                     <div class="group">
-                        <input class="largerCheckbox" type="checkbox" name="products" id="VFD" value="VFD" >
+                        <input class="largerCheckbox" type="checkbox" name="entry.117832342" id="VFD" value="true">
                         <label for="VFD">VFD</label><span class="checkmark"></span>
                     </div>
 
                     <div class="group">
-                        <input class="largerCheckbox" type="checkbox" name="products" id="Switchgear" value="Switchgear" >
+                        <input class="largerCheckbox" type="checkbox" name="entry.2029759171" id="Switchgear"
+                            value="true">
                         <label for="Switchgear">Switchgear</label>
                         <span class="checkmark"></span>
                     </div>
 
-                    <div class="group">
-                        <input class="largerCheckbox" type="checkbox" name="products" id="Switchgear" value="Switchgear" >
-                        <label for="Switchgear">Switchgear</label><span class="checkmark"></span>
-                    </div>
-
-                    <div class="group">
-                        <input class="largerCheckbox" type="checkbox" name="products" id="Switchgear" value="Switchgear" >
-                        <label for="Switchgear">Switchgear</label><span class="checkmark"></span>
-                    </div>
                 </div>
                 <!-- End of checkbox section -->
 
 
                 <div class="inputBox">
-                    <textarea style="height: 140px" name="Remarks" id="Remarks" placeholder="Write your remarks here..."
-                        required></textarea>
+                    <textarea style="height: 140px" name="entry.358292953" id="Remarks"
+                        placeholder="write your remarks here..." required></textarea>
                 </div>
 
 
-                <input type="submit" value="Submit" class="btn">
+                <input type="submit" value="Submit" class="btn open-popup">
             </form>
         </div>
+        <script>
+
+            function postToGoogle() {
+                $(".popup, .overlay").show();
+                $(".overlay").css("display", "flex");
+                var checkBoxValue = $('.largerCheckbox').is(':checked') ? $('.largerCheckbox').val() : false
+                var field1 = $("#name").val();
+                var field2 = $("#person").val();
+                var field3 = $("#number").val();
+                var field4 = $("#mail-id").val();
+                var field5 = $("#Panel").is(':checked');
+                var field6 = $("#VFD").is(':checked');
+                var field7 = $("#Switchgear").is(':checked');
+                var field8 = $("#Remarks").val();
+
+
+                $.ajax({
+                    url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSczOBXmXpnLUZLcmFDuNOYzWvvTw3BVQfYy6cp8bM8482V3-g/formResponse",
+
+                    //add your google form generated numbers below which are also the 'names' of your inputs     
+                    data: {
+                        "entry.411717523": field1,
+                        "entry.1037375391": field2,
+                        "entry.2047574455": field3,
+                        "entry.410100171": field4,
+                        "entry.1490762571": field5,
+                        "entry.117832342": field6,
+                        "entry.2029759171": field7,
+                        "entry.358292953": field8
+                    },
+                    type: "POST",
+                    dataType: "xml",
+                    success: function (d) {
+                        $('#contact').trigger('reset');
+                    },
+                    error: function (x, y, z) {
+                        $('#contact').trigger('reset');
+                    }
+                });
+                return false;
+
+            }
+        </script>
 
     </section>
 
@@ -274,6 +330,10 @@
         });
     </script>
     <!-- //end-smoth-scrolling -->
+    <script>
+        getProductTypes();
+
+    </script>
 </body>
 
 </html>
