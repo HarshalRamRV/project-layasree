@@ -11,12 +11,14 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-productOptions = [];
+popularProducts = [];
 items = [];
 productTypes = [];
 products = [];
 flyers = [];
 brands = [];
+applicationDatas = [];
+
 
 
 // $(window).load(
@@ -38,29 +40,30 @@ function passProductData(productName) {
     location.href = '../products.html';
 }
 
-// function getBrands() {
-//     db.collection("brands").get().then(data => {
-//         data.docs.forEach(element => {
-//             const singleBrand = element.data();
-//             brands.push(singleBrand);
-//         });
-//         brands.forEach(element => {
-//             $('.slick-track').append(
-//                 `
-//                 <div class="slick-slide-in">
-//                     <div class="atf-brand-active">
-//                         <a href="#"><img src="${element.brandLogo}" alt="image"></a>
-//                     </div>
-//                 </div>
-                
-                        
-//                     `
-//             );
-//         })
-//     });
-// }
-// getBrands();
+function getBrands() {
+    db.collection("brands").get().then(data => {
+        data.docs.forEach(element => {
+            const singleBrand = element.data();
+            brands.push(singleBrand);
+        });
 
+        brands.forEach(element => {
+            $('.brands').append(
+                `
+                <div class="image">
+                    <img  src="${element.brandLogo}" alt="image">
+                </div>
+                `
+            );
+        })
+    });
+    $(document).ready(function () {
+        $(".brands").delay().css({ visibility: "visible" })
+
+    });
+
+}
+getBrands();
 function getProducts() {
     productName = localStorage.getItem("productName")
     console.log(productName);
@@ -71,7 +74,7 @@ function getProducts() {
             products.push(singleProduct);
         });
         products.forEach(element => {
-            $('.products').prepend(
+            $('.product').append(
                 `
                 <div class="wrapper box">
                     <div class="parent"  onclick="passItemData('${element.brandName}');">
@@ -85,26 +88,27 @@ function getProducts() {
             );
         })
         $(document).ready(function () {
-            $('.products').append(
+            $('.product').append(
                 `
                 <div class="wrapper box">
                     <div class="parent"  onclick="location.href = '../flyers.html';">
                         <div class="child" style=" background-image: url(./images/flyer-icon.png);">
                         <div class="flyers" >
-                            <h3>Flyers</h3>
+                            <p>Flyers</p>
                         </div>
                      </div>
                 </div>
                 `
             );
         });
-        $(document).ready(    function () {
+        $(document).ready(function () {
             $(".spinner").fadeOut(),
-                $(".preloader").delay(150).fadeOut("slow"),
-                $("body").delay(400).css({ overflow: "visible" })
-    
+                $(".preloader").delay().fadeOut("fast"),
+                $("body").delay().css({ overflow: "visible" })
+            $(".product").delay().css({ visibility: "visible" })
+
         });
-    });
+    })
 
 }
 
@@ -118,19 +122,19 @@ function getFlyers() {
             $('.flyer').prepend(
                 `
                 <div class="wrapper box " style="
-                height: 40vh; width: 20vw;">
+                height: 40vh; width: 40rem;">
                 <div class="parent"  onclick="location.href = '${element.productPDF}';">
-                    <div class="child" style="background-image: url(${element.proImg}); background-color:rgba(242, 0, 0, 0); ">
+                    <div class="flyerchild" style="background-image: url(${element.proImg}); background-color:rgba(242, 0, 0, 0); ">
                     </div>
             </div>
                 `
             );
         })
-        $(document).ready(    function () {
+        $(document).ready(function () {
             $(".spinner").fadeOut(),
-                $(".preloader").delay(150).fadeOut("slow"),
-                $("body").delay(400).css({ overflow: "visible" })
-    
+                $(".preloader").delay().fadeOut("fast"),
+                $("body").delay().css({ overflow: "visible" })
+
         });
     });
 
@@ -143,8 +147,8 @@ function getItems() {
     db.collection(itemName).get().then(data => {
         console.log(data.docs[0].data())
         data.docs.forEach(element => {
-            const singleProduct = element.data();
-            items.push(singleProduct);
+            const singleItems = element.data();
+            items.push(singleItems);
         });
         items.forEach(element => {
             $('.item').append(
@@ -155,18 +159,17 @@ function getItems() {
                             </div>
                             <div class="content">
                             <p href="#" class="title">${element.productName}</p>
-                            <span>${element.productPrice}</span>
                             <p>${element.productDes}</p>
                         </div>
                         
                     `
             );
         })
-        $(document).ready(    function () {
-            $(".spinner").fadeOut(),
-                $(".preloader").delay(150).fadeOut("slow"),
-                $("body").delay(400).css({ overflow: "visible" })
-    
+        $(document).ready(function () {
+            $(".spinner").fadeOut("fast"),
+                $(".preloader").delay().fadeOut("fast"),
+                $("body").delay().css({ overflow: "visible" }),
+                $(".item").delay().css({ visibility: "visible" })
         });
     });
 }
@@ -175,8 +178,8 @@ function getProductTypes() {
     db.collection('ProductTypes').get().then(data => {
         console.log(data.docs[0].data())
         data.docs.forEach(element => {
-            const singleProduct = element.data();
-            productTypes.push(singleProduct);
+            const singleProductTypes = element.data();
+            productTypes.push(singleProductTypes);
         });
         productTypes.forEach(element => {
             $('.products-type').append(
@@ -189,25 +192,70 @@ function getProductTypes() {
     });
 }
 
-function getProductOptions() {
-    db.collection('productOptions').get().then(data => {
+function getPopularProducts() {
+    db.collection('popularProducts').get().then(data => {
         console.log(data.docs[0].data())
         data.docs.forEach(element => {
-            const singleProduct = element.data();
-            productOptions.push(singleProduct);
+            const singlePopularProducts = element.data();
+            popularProducts.push(singlePopularProducts);
         });
-        productOptions.forEach(element => {
-            $('.checkmark-options').append(
+        popularProducts.forEach(element => {
+            $('.popular-products').append(
                 `
-                <div class="group">
-                    <input class="largerCheckbox" type="checkbox" name="products" id="${element.productName}" value="${element.productName}" >
-                    <label for="${element.productName}">${element.productName}</label><span class="checkmark"></span>
+                <div class="col-lg-4 col-md-6">
+                    <div class="atf-single-service-wrap text-center">
+                        <div class="atf-single-service-wrap" >
+                                <div class="d-flex" style="min-height:300px"><img src="${element.productImg}" style=" object-fit: contain;"></img></div>
+                            <div class="atf-service-content mt-4" style="">
+                                <h2>${element.productName}</h2>
+                                <p>${element.productDes}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 `
             );
         })
+        $(document).ready(function () {
+            $(".popular-products").delay().css({ visibility: "visible" })
+
+        });
     });
 }
-getProductOptions();
+getPopularProducts();
 
+function getApplicationDatas() {
+    db.collection('applicationDatas').get().then(data => {
+        console.log(data.docs[0].data())
+        data.docs.forEach(element => {
+            const singleApplicationData = element.data();
+            applicationDatas.push(singleApplicationData);
+        });
+        applicationDatas.forEach(element => {
+            $('.application-datas').append(
+                `
+                <div class="row m-5" style="    background: var(--black);
+                border: 1px solid #e4e4e4;
+                box-shadow: 0 5px 15px rgb(0 0 0 / 20%);">
+        
+                    <div class="image">
+                        <img src="${element.appImg}" style="object-fit: cover; height: 100%;" alt="">
+                    </div>
+        
+                    <div class="content">
+                        <h1>${element.appName}</h1>
+                        <p>${element.appContent}</p>
+                    </div>
+                </div>
+                
+                `
+            );
+        })
+        $(document).ready(function () {
+            $(".application-datas").delay().css({ visibility: "visible" })
+
+        });
+    });
+}
+getApplicationDatas();

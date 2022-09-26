@@ -47,7 +47,7 @@
     </button>
     <header class="header-box">
         <div class="header-top">
-            <div><i class="fas fa-envelope"></i>Email: <a href="#">layashree.engineering@gmail.com</a></div>
+            <div><i class="fas fa-envelope"></i>Email: <a href="#">info.layashree@gmail.com</a></div>
             <div><i class="fas fa-phone-volume"></i>Contact: <a href="#">+91 81244 61234 </a></div>
         </div>
         <div class="header">
@@ -89,7 +89,7 @@
 
     <!-- contact section starts  -->
 
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" style="padding-top:10vh">
         <div class="overlay">
             <div class="popup">
                 <div class="icon-box">
@@ -101,13 +101,12 @@
                 <a class="btn close-popup">Close</a>
             </div>
         </div>
-        <h1 class="heading"> <span>contact</span> us </h1>
 
         <div class="row">
 
             <form id="sectionForm" onsubmit="return postToGoogle();" method="POST">
-                <h3>Enquiry</h3>
-                <div class="inputBox">
+                <h3 class="d-flex justify-content-center p-2 " style="font-size: 4rem; text-transform: capitalize;">Get in touch</h2>
+                    <div class="inputBox">
                     <input id="name" name="entry.411717523" type="text" placeholder="company name" required>
                 </div>
                 <div class="inputBox">
@@ -125,20 +124,23 @@
 
                 <div class="container-checkbox checkmark-options">
                     <div class="group">
-                        <input class="largerCheckbox" type="checkbox" name="entry.1490762571" id="Panel" value="true">
-                        <label for="panel">Panel</label><span class="checkmark"></span>
+                        <input class="largerCheckbox" type="checkbox" name="entry.1490762571" id="Motors" value="true">
+                        <label for="Motors">Motors</label><span class="checkmark"></span>
                     </div>
 
                     <div class="group">
-                        <input class="largerCheckbox" type="checkbox" name="entry.117832342" id="VFD" value="true">
-                        <label for="VFD">VFD</label><span class="checkmark"></span>
+                        <input class="largerCheckbox" type="checkbox" name="entry.117832342" id="DrivesVFD" value="true">
+                        <label for="DrivesVFD">Drives(VFD)</label><span class="checkmark"></span>
                     </div>
 
                     <div class="group">
-                        <input class="largerCheckbox" type="checkbox" name="entry.2029759171" id="Switchgear"
-                            value="true">
-                        <label for="Switchgear">Switchgear</label>
-                        <span class="checkmark"></span>
+                        <input class="largerCheckbox" type="checkbox" name="entry.2029759171" id="Gearboxs" value="true">
+                        <label for="Gearboxs">Gearboxs</label><span class="checkmark"></span>
+                    </div>
+
+                    <div class="group">
+                        <input class="largerCheckbox" type="checkbox" name="entry.1743875396" id="Panels" value="true">
+                        <label for="Panels">Panels</label><span class="checkmark"></span>
                     </div>
 
                 </div>
@@ -164,10 +166,11 @@
                 var field2 = $("#person").val();
                 var field3 = $("#number").val();
                 var field4 = $("#mail-id").val();
-                var field5 = $("#Panel").is(':checked');
-                var field6 = $("#VFD").is(':checked');
-                var field7 = $("#Switchgear").is(':checked');
-                var field8 = $("#Remarks").val();
+                var field5 = $("#Motors").is(':checked');
+                var field6 = $("#DrivesVFD").is(':checked');
+                var field7 = $("#Gearboxs").is(':checked');
+                var field8 = $("#Panels").is(':checked');
+                var field9 = $("#Remarks").val();
 
 
                 $.ajax({
@@ -182,7 +185,8 @@
                         "entry.1490762571": field5,
                         "entry.117832342": field6,
                         "entry.2029759171": field7,
-                        "entry.358292953": field8
+                        "entry.1743875396": field8,
+                        "entry.358292953": field9
                     },
                     type: "POST",
                     dataType: "xml",
@@ -213,7 +217,7 @@
                             <ul class="pr-lg-5">
                                 <li>Malligai St, Vivekananda Nagar, Thirumullaivoyal, Chennai, Tamil Nadu 600109</li>
                                 <li>+91 81244 61234</li>
-                                <li>layashree.engineering@gmail.com</li>
+                                <li style="text-transform: lowercase;">info.layashree@gmail.com</li>
                             </ul>
                         </div>
                     </div>
@@ -221,24 +225,21 @@
 
                     <div class="col-lg-2 col-md-6 col-12 atf-footer-link wow fadeIn" data-wow-duration="1s"
                         data-wow-delay="0.3s" data-wow-offset="0">
-                        <h5>Quick Links</h5>
+                        <h5>Product Links</h5>
                         <ul class="atf-list-menu">
                             <li> <a><i class="fas fa-angle-right mr-2"></i>Our Home</a></li>
                             <li> <a href="./about.html"><i class="fas fa-angle-right mr-2"></i>About Us</a></li>
                             <li> <a href="./products.html"><i class="fas fa-angle-right mr-2"></i>Our Products</a></li>
-                            <li> <a href="./contact.html"><i class="fas fa-angle-right mr-2"></i>Contact Us</a></li>
                         </ul>
                     </div>
                     <!--- END COL -->
 
                     <div class="col-lg-2 col-md-6 col-12 atf-footer-link wow fadeIn" data-wow-duration="1s"
                         data-wow-delay="0.4s" data-wow-offset="0">
-                        <h5>Support Links</h5>
+                        <h5>Contact Links</h5>
                         <ul class="atf-list-menu">
-                            <li><a href="#"><i class="fas fa-angle-right mr-2"></i>Our Terms</a></li>
-                            <li><a href="#"><i class="fas fa-angle-right mr-2"></i>Our Service</a></li>
-                            <li><a href="#"><i class="fas fa-angle-right mr-2"></i>Privacy Policy</a></li>
-                            <li><a href="#"><i class="fas fa-angle-right mr-2"></i>Licenses</a></li>
+                            <li> <a href="./contact.html"><i class="fas fa-angle-right mr-2"></i>Contact Us</a></li>
+                            <li> <a href="./enquiry.html"><i class="fas fa-angle-right mr-2"></i>Get in Touch</a></li>
                         </ul>
                     </div>
                     <!--- END COL -->

@@ -339,7 +339,7 @@ li.dropdown.act a.w3_icons_act {
 /*-- banner-top --*/
 
 .banner-top {
-	background: url(https://c7.alamy.com/comp/2DF02T2/industrial-high-pressure-water-pump-with-electric-motor-drive-isolated-on-white-background-2DF02T2.jpg) no-repeat 0px 0px;
+	background: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url(../images/banner4.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -351,7 +351,7 @@ li.dropdown.act a.w3_icons_act {
 }
 
 .banner-top1 {
-	background: url(../images/banner2.jpg) no-repeat 0px 0px;
+	background: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url(../images/banner3.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -362,7 +362,7 @@ li.dropdown.act a.w3_icons_act {
 }
 
 .banner-top2 {
-	background: url(../images/banner3.jpg) no-repeat 0px 0px;
+	background: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url(../images/banner1.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -373,7 +373,7 @@ li.dropdown.act a.w3_icons_act {
 }
 
 .banner-top3 {
-	background: url(../images/banner4.jpg) no-repeat 0px 0px;
+	background: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url(../images/banner2.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -384,7 +384,7 @@ li.dropdown.act a.w3_icons_act {
 }
 
 .banner-top4 {
-	background:var(--bg);
+	background: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),var(--bg);
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
